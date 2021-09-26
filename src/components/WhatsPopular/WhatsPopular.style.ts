@@ -4,8 +4,9 @@ import { Container } from "../../globalStyles";
 export const Heading = styled(Container)`
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  ${Container}
+  ${Container};
+
+  padding-bottom: 0;
 `;
 
 export const Categories = styled.div`
@@ -14,10 +15,10 @@ export const Categories = styled.div`
   border: 2px solid black;
   margin-left: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   border-radius: 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 export const Category = styled.span`
@@ -31,4 +32,5 @@ export const Category = styled.span`
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  /* margin-right: 10px; */
 `;
