@@ -17,7 +17,7 @@ const Homepage = () => {
         </h2>
         <HomeSearchForm />
       </Home>
-      <WhatsPopular p="p" />
+      <WhatsPopular />
       <CardBox />
       <FreeToWatch />
       <CardBox />
