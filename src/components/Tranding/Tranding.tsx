@@ -3,7 +3,7 @@ import {
   Categories,
   Category,
   Heading,
-} from "../components/WhatsPopular/WhatsPopular.style";
+} from "../WhatsPopular/WhatsPopular.style";
 
 const Tranding = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "../components/WhatsPopular/WhatsPopular.style";
+import { Heading } from "../WhatsPopular/WhatsPopular.style";
 import { JoinBox } from "./Join.style";
 
 const Join = () => {
