@@ -1,6 +1,10 @@
 import React from "react";
+import CardBox from "../../components/CardBox/CartBox";
+import FreeToWatch from "../../components/FreeToWatch/FreeToWatch";
 import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
 import WhatsPopular from "../../components/WhatsPopular/WhatsPopular";
+import Join from "../../Join/Join";
+import Tranding from "../../Tranding/Tranding";
 import { Home } from "./Homepage.style";
 
 const Homepage = () => {
@@ -13,7 +17,13 @@ const Homepage = () => {
         </h2>
         <HomeSearchForm />
       </Home>
-      <WhatsPopular />
+      <WhatsPopular p="p" />
+      <CardBox />
+      <FreeToWatch />
+      <CardBox />
+      <Join />
+      <Tranding />
+      <CardBox />
     </>
   );
 };

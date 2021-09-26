@@ -21,7 +21,7 @@ code {
 `;
 
 export const Container = styled.section`
-  max-width: 1200px;
+  width: 1200px;
   margin: auto;
   padding: 30px;
 `;
