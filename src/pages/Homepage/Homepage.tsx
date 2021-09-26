@@ -3,9 +3,10 @@ import CardBox from "../../components/CardBox/CartBox";
 import FreeToWatch from "../../components/FreeToWatch/FreeToWatch";
 import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
 import WhatsPopular from "../../components/WhatsPopular/WhatsPopular";
-import Join from "../../Join/Join";
-import Tranding from "../../Tranding/Tranding";
+
+import Tranding from "../../components/Tranding/Tranding";
 import { Home } from "./Homepage.style";
+import Join from "../../components/Join/Join";
 
 const Homepage = () => {
   return (
