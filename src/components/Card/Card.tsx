@@ -2,17 +2,21 @@ import React from "react";
 import { CardImg, CardWrapper, Details, Release, Title } from "./Card.style";
 import { IoEllipsisHorizontalCircleSharp } from "react-icons/io5";
 
-const Card = () => {
+interface IProps {
+  item: { [key: string]: any };
+}
+
+const Card: React.FC<IProps> = ({ item }) => {
   return (
     <CardWrapper>
-      <CardImg>
+      <CardImg img={item.poster_path}>
         <div>
           <IoEllipsisHorizontalCircleSharp />
         </div>
       </CardImg>
       <Details>
-        <Title>SAS:Red Notice</Title>
-        <Release>Aug 11, 2021</Release>
+        <Title>{item.original_title || item.original_name}</Title>
+        <Release>{item.release_date || item.first_air_date}</Release>
       </Details>
     </CardWrapper>
   );

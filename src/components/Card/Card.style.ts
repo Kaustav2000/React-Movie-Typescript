@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import Img from "../../assets/card.jpg";
+
+interface IProps {
+  img: string;
+}
 
 export const CardWrapper = styled.div`
   width: 150px;
@@ -11,7 +14,11 @@ export const CardImg = styled.div`
   position: relative;
   height: 225px;
   cursor: pointer;
-  background: url(${Img}) no-repeat center center/cover;
+  background: url(${(props: IProps) =>
+      props.img &&
+      "https://www.themoviedb.org/t/p/w220_and_h330_face" + props.img})
+    no-repeat center center/cover;
+
   div {
     position: absolute;
     top: 10px;

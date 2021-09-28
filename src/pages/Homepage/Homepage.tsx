@@ -1,22 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardBox from "../../components/CardBox/CartBox";
 import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
 import { Home } from "./Homepage.style";
 import Join from "../../components/Join/Join";
 import HomeSectionHeading from "../../components/HomeSectionHeading/HomeSectionHeading";
+import { popularStreamingData } from "../../api/fetchHomepagedata";
+import { useFetchData } from "../../hooks/useFetchData";
 
 export interface IState {
   headings: {
     heading: string;
     categories: string[];
   }[];
+  movies: any[];
 }
 
 const Homepage = () => {
   const [data, setData] = useState<IState["headings"]>([
     {
       heading: "What's Popular",
-      categories: ["Streaming", "On Tv", "For Rent", "In Theatres"],
+      categories: ["Popular", "Tv Popular", "In Theatres"],
     },
     {
       heading: "Free To Watch",
@@ -27,6 +30,19 @@ const Homepage = () => {
       categories: ["Today", "This Week"],
     },
   ]);
+
+  const { state, setPopular, setFree, setTrending } = useFetchData();
+
+  useEffect(() => {
+    setPopular("Popular");
+    setFree("Movies");
+    setTrending("Today");
+  }, []);
+
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
+
   return (
     <>
       <Home>
@@ -37,12 +53,12 @@ const Homepage = () => {
         <HomeSearchForm />
       </Home>
       <HomeSectionHeading data={data[0]} />
-      <CardBox />
+      <CardBox movies={state.popular} />
       <HomeSectionHeading data={data[1]} />
-      <CardBox />
+      <CardBox movies={state.free} />
       <Join />
       <HomeSectionHeading data={data[2]} />
-      <CardBox />
+      <CardBox movies={state.free} />
     </>
   );
 };

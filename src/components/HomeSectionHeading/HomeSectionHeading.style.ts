@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
+interface IProps {
+  selectedCategory: boolean;
+}
+
 export const Heading = styled(Container)`
   display: flex;
   align-items: center;
@@ -22,15 +26,17 @@ export const Categories = styled.div`
 `;
 
 export const Category = styled.span`
-  background-color: #051d4d;
+  background-color: ${(props: IProps) =>
+    props.selectedCategory ? "#051d4d" : "#fff"};
   height: 100%;
   width: 100%;
   text-align: center;
-  color: white;
+  color: ${(props: IProps) => (props.selectedCategory ? "#fff" : "#000")};
   padding-top: 7px;
   border-radius: 50px;
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  transition: 0.6s all ease;
   /* margin-right: 10px; */
 `;
