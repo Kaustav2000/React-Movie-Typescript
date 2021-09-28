@@ -1,18 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Card from "../Card/Card";
 import { CardBoxWrapper } from "./CardBox.style";
+import { IState as Props } from "../../pages/Homepage/Homepage";
 
-const CardBox = () => {
+interface IProps {
+  movies: Props["movies"];
+}
+
+const CardBox: React.FC<IProps> = ({ movies }) => {
   return (
     <CardBoxWrapper>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {movies?.map((item, key) => (
+        <Fragment key={key}>
+          <Card item={item} />
+        </Fragment>
+      ))}
     </CardBoxWrapper>
   );
 };
