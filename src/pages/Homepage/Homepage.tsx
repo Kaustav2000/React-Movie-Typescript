@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import CardBox from "../../components/CardBox/CartBox";
-import FreeToWatch from "../../components/FreeToWatch/FreeToWatch";
 import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
-import WhatsPopular from "../../components/WhatsPopular/WhatsPopular";
-
-import Tranding from "../../components/Tranding/Tranding";
 import { Home } from "./Homepage.style";
 import Join from "../../components/Join/Join";
+import HomeSectionHeading from "../../components/HomeSectionHeading/HomeSectionHeading";
+
+export interface IState {
+  headings: {
+    heading: string;
+    categories: string[];
+  }[];
+}
 
 const Homepage = () => {
+  const [data, setData] = useState<IState["headings"]>([
+    {
+      heading: "What's Popular",
+      categories: ["Streaming", "On Tv", "For Rent", "In Theatres"],
+    },
+    {
+      heading: "Free To Watch",
+      categories: ["Movies", "Tv"],
+    },
+    {
+      heading: "Trending",
+      categories: ["Today", "This Week"],
+    },
+  ]);
   return (
     <>
       <Home>
@@ -18,12 +36,12 @@ const Homepage = () => {
         </h2>
         <HomeSearchForm />
       </Home>
-      <WhatsPopular />
+      <HomeSectionHeading data={data[0]} />
       <CardBox />
-      <FreeToWatch />
+      <HomeSectionHeading data={data[1]} />
       <CardBox />
       <Join />
-      <Tranding />
+      <HomeSectionHeading data={data[2]} />
       <CardBox />
     </>
   );
