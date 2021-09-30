@@ -6,18 +6,20 @@ interface IProps {
     heading: string;
     categories: string[];
   };
+  type: any;
 }
 
 export interface IState {
   categorySelected: number;
 }
 
-const HomeSectionHeading: React.FC<IProps> = ({ data }) => {
+const HomeSectionHeading = ({ data, type }: IProps) => {
   const [selectedCategory, setSelectedcategory] =
     useState<IState["categorySelected"]>(0);
 
   const handleClick = (item: string, idx: number) => {
     setSelectedcategory(idx);
+    type(item);
   };
 
   return (
