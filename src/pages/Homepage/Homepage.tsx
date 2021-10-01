@@ -17,11 +17,11 @@ export interface IState {
 const Homepage = () => {
   let popular: IState = {
     heading: "What's Popular",
-    categories: ["Popular", "Tv Popular", "In Theatres"],
+    categories: ["Popular", "TV Popular", "In Theatres"],
   };
   let freeToWatch: IState = {
     heading: "Free To Watch",
-    categories: ["Movies", "Tv"],
+    categories: ["TV", "Movies"],
   };
   let trending: IState = {
     heading: "Trending",
@@ -32,7 +32,7 @@ const Homepage = () => {
 
   useEffect(() => {
     setPopular("Popular");
-    setFree("Movies");
+    setFree("TV");
     setTrending("Today");
   }, []);
 
@@ -55,7 +55,7 @@ const Homepage = () => {
       <CardBox movies={state.free} />
       <Join />
       <HomeSectionHeading data={trending} type={setTrending} />
-      <CardBox movies={state.free} />
+      <CardBox movies={state.trending} />
     </>
   );
 };
