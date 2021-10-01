@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import {
   freeToWatchData,
   popularStreamingData,
@@ -48,16 +48,20 @@ export const useFetchData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const setPopular = async (item: string) => {
+    dispatch({ type: ACTIONS.MAKE_REQUEST });
     let data = await popularStreamingData(item);
     dispatch({ type: ACTIONS.POPULAR_DATA, payload: data });
   };
 
   const setFree = async (item: string) => {
+    dispatch({ type: ACTIONS.MAKE_REQUEST });
+
     let data = await freeToWatchData(item);
     dispatch({ type: ACTIONS.FREE_DATA, payload: data });
   };
 
   const setTrending = async (item: string) => {
+    dispatch({ type: ACTIONS.MAKE_REQUEST });
     let data = await trendingData(item);
     dispatch({ type: ACTIONS.TRENDING, payload: data });
   };

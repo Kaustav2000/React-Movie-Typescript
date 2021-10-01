@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import CardBox from "../../components/CardBox/CartBox";
 import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
 import { Home } from "./Homepage.style";
 import Join from "../../components/Join/Join";
 import HomeSectionHeading from "../../components/HomeSectionHeading/HomeSectionHeading";
-
 import { useFetchData } from "../../hooks/useFetchData";
 
 export interface IState {
@@ -35,10 +34,6 @@ const Homepage = () => {
     setFree("TV");
     setTrending("Today");
   }, []);
-
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
 
   return (
     <>
