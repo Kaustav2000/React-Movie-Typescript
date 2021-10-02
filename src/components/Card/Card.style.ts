@@ -8,6 +8,7 @@ export const CardWrapper = styled.div`
   width: 150px;
   height: 340px;
   margin-right: 20px;
+  position: relative;
 `;
 
 export const CardImg = styled.div`
@@ -42,4 +43,20 @@ export const Release = styled.p`
   font-weight: 100;
   color: grey;
   font-size: 16px;
+`;
+export const ProgressBarParent = styled.div`
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #081c22;
+  bottom: 95px;
+  left: 10px;
+`;
+export const ProgressBar = styled.div`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
 `;

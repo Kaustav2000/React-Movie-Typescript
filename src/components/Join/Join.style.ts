@@ -8,4 +8,5 @@ export const JoinBox = styled(Container)`
   height: 300px;
   ${Container}
   padding: 30px 40px;
+  padding-top: 100px;
 `;

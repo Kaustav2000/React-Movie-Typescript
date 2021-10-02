@@ -4,7 +4,7 @@ import { JoinBox } from "./Join.style";
 const Join = () => {
   return (
     <JoinBox>
-      <h1 style={{ color: "white" }}>Join Now</h1>
+      <h1 style={{ color: "white", marginBottom: "20px" }}>Join Now</h1>
       <h4 style={{ color: "white" }}>
         Get access to maintain your own custom personal lists, track what you've
         seen and search and filter for what to watch next—regardless if it's in
