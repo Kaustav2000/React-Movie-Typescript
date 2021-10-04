@@ -13,16 +13,12 @@ interface Iprops {
   item: any;
 }
 const SearchResult = ({ item }: Iprops) => {
-  console.log(results);
-
-  let date: Date = new Date(item.release_date);
-  console.log(date);
   return (
     <SearchResultWrapper>
       <Image img={item.poster_path} />
       <Content>
         <Heading>{item.title}</Heading>
-        <Date>{date}</Date>
+        <Date></Date>
         <Description>{item.overview}</Description>
       </Content>
     </SearchResultWrapper>
