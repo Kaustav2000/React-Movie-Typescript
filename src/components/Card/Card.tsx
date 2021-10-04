@@ -15,7 +15,7 @@ import "react-circular-progressbar/dist/styles.css";
 interface IProps {
   item: { [key: string]: any };
 }
-const percentage = 66;
+
 const Card: React.FC<IProps> = ({ item }) => {
   return (
     <CardWrapper>
