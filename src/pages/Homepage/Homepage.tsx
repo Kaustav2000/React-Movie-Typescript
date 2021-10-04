@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import CardBox from "../../components/CardBox/CartBox";
-import HomeSearchForm from "../../components/HomeSearchForm/HomeSearchForm";
+import HomeSearchForm, {
+  results,
+} from "../../components/HomeSearchForm/HomeSearchForm";
 import { Home } from "./Homepage.style";
 import Join from "../../components/Join/Join";
 import HomeSectionHeading from "../../components/HomeSectionHeading/HomeSectionHeading";
@@ -34,6 +36,8 @@ const Homepage = () => {
     setFree("TV");
     setTrending("Today");
   }, []);
+
+  // console.log(results);
 
   return (
     <>

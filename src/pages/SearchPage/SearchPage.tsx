@@ -1,5 +1,6 @@
 import SearchCategories from "../../components/SearchCategories/SearchCategories";
-import SearchResult from "../../components/SearchResult/SearchResult";
+
+import SearchResultBox from "../../components/SearchResultBox/SearchResultBox";
 
 import { SearchPageWrapper } from "./SearchPage.style";
 
@@ -8,7 +9,7 @@ const SearchPage = () => {
     <>
       <SearchPageWrapper>
         <SearchCategories />
-        <SearchResult />
+        <SearchResultBox />
       </SearchPageWrapper>
     </>
   );
