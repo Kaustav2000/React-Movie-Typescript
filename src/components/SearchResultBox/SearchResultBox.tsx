@@ -1,11 +1,14 @@
 import React, { Fragment } from "react";
 import SearchResult from "../../components/SearchResult/SearchResult";
-import { results } from "../HomeSearchForm/HomeSearchForm";
 
-const SearchResultBox = () => {
+interface Iprops {
+  data: {}[];
+}
+
+const SearchResultBox = ({ data }: Iprops) => {
   return (
     <div>
-      {results.map((item, idx) => (
+      {data.map((item, idx) => (
         <Fragment key={idx}>
           <SearchResult item={item} />
         </Fragment>
