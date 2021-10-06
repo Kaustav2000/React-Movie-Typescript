@@ -1,5 +1,4 @@
 import React from "react";
-import { results } from "../HomeSearchForm/HomeSearchForm";
 import {
   Content,
   Date,
@@ -8,7 +7,6 @@ import {
   Image,
   SearchResultWrapper,
 } from "./SearchResult.style";
-
 interface Iprops {
   item: any;
 }
